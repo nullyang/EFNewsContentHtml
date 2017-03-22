@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="text/html" charset="UTF-8" http-queiv="Content-Type" />
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+        <meta content="ios demo" name="description" />
+        <link rel="stylesheet" href="fundtable.css">
+        <link rel="stylesheet" href="SNBodyCSS.css">
+            <script src="zepto.min.js"></script>
+            <script src="SNJavaBridge.js"></script>
+    </head>
+    <body>
+        <div class="news-wrapper">
+            <section class="news-content" id="news-content">
+                <h1 id="news-title">{{ newsContentDict.title }}</h1>
+                <div class="from">
+                    <time id="news-time">{{ newsContentDict.showtime }}</time>
+                    <span class="author">{{ newsContentDict.source }}</span>
+                        </div>
+                <article id="news-article">
+                    <div id="article-body">
+                        {{newsContentDict.art_content_copy}}
+                    </div>
+                </article>
+                {{ newsContentDict.editsourcestr}}
+                <div class="zwshare">
+                    <b id="shareName">正文分享至</b>
+                    <a href="effundlocal:shareWxS()" class="wxa"><em class="wx"></em>微信</a>
+                    <a href="effundlocal:shareWxF()" class="pyqa"><em class="pyq"></em>朋友圈</a>
+                    <a href="effundlocal:shareWb()" class="wba"><em class="wb"></em>新浪微博</a>
+                </div>
+                </section>
+        </div>
+        
+        {{ newsContentDict.relatenewsstr }}
+        {{ newsContentDict.newsadstr }}
+        <script src="SNBodyJS.js"></script>
+        <div id="bodyBlank"></div>
+    </body>
+</html>
